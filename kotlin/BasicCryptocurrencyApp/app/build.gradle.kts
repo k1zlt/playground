@@ -3,15 +3,15 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
 
     kotlin("kapt")
-    id(libs.hilt.android)
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "com.example.temp"
+    namespace = "com.example.basiccryptocurrencyapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.temp"
+        applicationId = "com.example.basiccryptocurrencyapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -76,7 +76,7 @@ dependencies {
     implementation (libs.converter.gson)
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-    implementation (libs.accompanist.flowlayout)
+//    implementation (libs.accompanist.flowlayout)
     implementation(libs.androidx.hilt.navigation.fragment)
     implementation(libs.androidx.hilt.navigation.compose)
 }
